@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
     }
     await sql`INSERT INTO guesses (guess) VALUES (${guess})`;
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Failed to insert guess' }, { status: 500 });
   }
 } 
