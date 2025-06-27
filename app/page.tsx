@@ -23,7 +23,7 @@ export default function Home() {
       } else {
         setMessage("Failed to submit guess.");
       }
-    } catch (err) {
+    } catch {
       setMessage("Error submitting guess.");
     } finally {
       setLoading(false);
